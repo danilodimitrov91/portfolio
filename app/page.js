@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className="hero">
         <h1 className="hero-title">
-          Izrada sajtova<br />kvalitetno, brzo i <span className="accent">povoljno.</span>
+          Izrada sajtova<br />koji se <span className="accent">pamte.</span>
         </h1>
         <div className="hero-row">
           <p className="hero-desc">
