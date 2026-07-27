@@ -85,3 +85,39 @@ img.proj-img { object-fit: cover; display: block; }
 .footer-copy { font-size: 14px; color: oklch(0.55 0.01 90); font-weight: 600; }
 .footer-social { display: flex; gap: 28px; }
 .footer-link { font-size: 14px; color: oklch(0.75 0.01 90); font-weight: 600; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 0 20px; }
+
+  .header { flex-wrap: wrap; row-gap: 14px; padding: 20px 0; }
+  .logo { order: 1; }
+  .btn-cta { order: 2; }
+  .nav { order: 3; width: 100%; justify-content: center; gap: 24px; }
+
+  .hero { padding: 40px 0 24px; }
+  .hero-row { grid-template-columns: 1fr; gap: 20px; margin-top: 28px; align-items: start; }
+  .hero-desc { font-size: 18px; max-width: none; }
+  .hero-actions { justify-content: flex-start; }
+
+  .marquee-wrap { margin: 36px -20px; padding: 16px 0; }
+  .marquee-track { justify-content: center; row-gap: 10px; }
+  .marquee-item { font-size: 18px; padding: 0 14px; }
+
+  .section { padding: 48px 0; }
+  .section-title { margin-bottom: 28px; }
+  .services-grid { grid-template-columns: 1fr; }
+
+  .projects-section { padding: 8px 0 48px; }
+  .projects-header { margin: 36px 0 28px; }
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .about-section { grid-template-columns: 1fr; gap: 28px; padding: 48px 0; }
+
+  .contact-section { padding: 48px 0; }
+  .contact-box { padding: 40px 22px; }
+  .contact-title { margin-bottom: 16px; }
+  .contact-desc { margin-bottom: 28px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  .footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
