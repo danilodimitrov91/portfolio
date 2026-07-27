@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'sajtovi.dev — Izrada sajtova koji se pamte.',
-  description: 'Izrada sajtova koji se pamte. Dizajn, razvoj i održavanje sajtova koji donose rezultate.',
+  title: 'Izrada sajtova kvalitetno, brzo i povoljno - Sajtovi.dev',
+  description: 'Izrada sajtova kvalitetno, brzo i povoljno. Dizajn, razvoj i održavanje sajtova koji donose rezultate.',
   icons: {
     icon: '/favicon.svg',
   },
