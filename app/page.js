@@ -2,47 +2,68 @@ import ContactForm from './components/ContactForm';
 
 const projects = [
   {
+    href: 'https://rasveta.sajtovi.dev',
+    img: '/images/starlight.webp',
+    name: 'StarLight',
+    category: 'Rasveta',
+    badge: 'U izradi',
+    desc: 'Onlajn prodavnica rasvete — preko 5000 proizvoda od različitih dobavljača: lusteri, LED trake i sijalice po kategorijama. Sajt je trenutno u izradi.',
+  },
+  {
+    href: 'https://supstrat.com',
+    img: '/images/supstrat.webp',
+    name: 'Supstrat.com',
+    category: 'Biljke',
+    desc: 'Prodavnica prirodnih supstrata za orhideje i aroide — ručno sortirano i prosušeno, dostava širom Srbije.',
+  },
+  {
     href: 'https://netoglasi.rs',
-    img: '/images/netoglasi.png',
+    img: '/images/netoglasi.webp',
     name: 'netOGLASI.rs',
     category: 'Oglasi',
     desc: 'Oglasnik za kupoprodaju — pretraga po kategorijama, lokaciji i ceni, uz objavu oglasa u par klikova.',
   },
   {
     href: 'https://paminjami.rs',
-    img: '/images/paminjami.png',
+    img: '/images/paminjami.webp',
     name: 'PamiNjami.rs',
     category: 'Ketering',
     desc: 'Online meni za ketering servis iz Dimitrovgrada — ponuda, cene i poručivanje slanih i slatkih zalogaja za proslave.',
   },
   {
     href: 'https://odklikadoslika.rs',
-    img: '/images/odklikadoslika.png',
+    img: '/images/odklikadoslika.webp',
     name: 'OdKlikaDoSlika.rs',
     category: 'Fotografija',
     desc: 'Digitalna galerija za venčanja i proslave — gosti dele fotografije skeniranjem jednog QR koda, bez instalacije aplikacije.',
   },
   {
-    href: 'https://supstrat.com',
-    img: '/images/supstrat.png',
-    name: 'Supstrat.com',
-    category: 'Biljke',
-    desc: 'Prodavnica prirodnih supstrata za orhideje i aroide — ručno sortirano i prosušeno, dostava širom Srbije.',
-  },
-  {
-    href: 'https://netoglasi.rs/starlight/claude/v2-minimal.html',
-    img: '/images/starlight.png',
-    name: 'StarLight',
-    category: 'Rasveta',
-    badge: 'U izradi',
-    desc: 'Onlajn prodavnica rasvete — lusteri, LED trake i sijalice po kategorijama. Sajt je trenutno u izradi.',
-  },
-  {
     href: 'https://galerija.vip',
-    img: '/images/galerija-vip.png',
+    img: '/images/galerija-vip.webp',
     name: 'Galerija.vip',
     category: 'SaaS',
     desc: 'Platforma za profesionalne fotografe — skladištenje, deljenje i isporuka fotografija klijentima na jednom mestu.',
+  },
+  {
+    href: 'https://uni-print.rs',
+    img: '/images/uni-print.webp',
+    name: 'Uni-print.rs',
+    category: 'Štampa',
+    desc: 'Sajt štamparije iz Niša — ponuda reklamnih materijala, kožne galanterije i štamparskih mašina, sa katalogom po kategorijama.',
+  },
+  {
+    href: 'https://digitec.rs',
+    img: '/images/digitec.webp',
+    name: 'Digitec.rs',
+    category: 'Štampa',
+    desc: 'Onlajn prodavnica reklamnih materijala iz Beograda — poklon programi, tekstil, obuća i štampa na jednom mestu.',
+  },
+  {
+    href: 'https://focuspromo.rs',
+    img: '/images/focuspromo.webp',
+    name: 'FocusPromo.rs',
+    category: 'Štampa',
+    desc: 'Sajt proizvođača radnih uniformi iz Niša — ponuda reklamnih materijala, tekstila i sportske opreme po kategorijama.',
   },
 ];
 
@@ -107,7 +128,7 @@ export default function Home() {
       <section id="projekti" className="projects-section">
         <div className="projects-header">
           <h2 className="projects-title">Radovi<span className="accent">.</span></h2>
-          <p className="projects-sub">Šest sajtova, šest industrija, isti fokus: rezultat.</p>
+          <p className="projects-sub">Devet sajtova, različite industrije, isti fokus: rezultat.</p>
         </div>
         <div className="projects-grid">
           {projects.map((p) => (
@@ -135,7 +156,7 @@ export default function Home() {
 
       <section id="o-meni" className="about-section">
         <div className="about-photo">
-          <span className="about-photo-text">portret fotografija</span>
+          <img className="about-photo-img" src="/images/portret.webp" alt="Danilo Dimitrov" />
         </div>
         <div>
           <h2 className="about-title">
