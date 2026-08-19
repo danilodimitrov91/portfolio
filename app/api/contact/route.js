@@ -1,11 +1,26 @@
 import nodemailer from 'nodemailer';
 
+// Klijent može sam da postavi X-Forwarded-For/X-Real-IP, pa se vrednost prihvata
+// samo ako izgleda kao validna IPv4/IPv6 adresa — sprečava ubacivanje proizvoljnog
+// teksta u telo mejla preko lažiranog zaglavlja.
+function sanitizeIp(raw) {
+  const ip = raw?.trim();
+  if (!ip || ip.length > 45 || !/^[0-9a-fA-F:.]+$/.test(ip)) return null;
+  return ip;
+}
+
 export async function POST(request) {
   const { ime, telefon, email, poruka } = await request.json();
 
   if (!ime || !telefon || !email || !poruka) {
     return Response.json({ error: 'Nedostaju podaci.' }, { status: 400 });
   }
+
+  const forwardedFor = request.headers.get('x-forwarded-for')?.split(',')[0];
+  const ip =
+    sanitizeIp(forwardedFor) ||
+    sanitizeIp(request.headers.get('x-real-ip')) ||
+    'nepoznato';
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -23,7 +38,7 @@ export async function POST(request) {
       to: process.env.CONTACT_TO || process.env.SMTP_USER,
       replyTo: email,
       subject: `Novi upit sa sajta — ${ime}`,
-      text: `Ime: ${ime}\nTelefon: ${telefon}\nEmail: ${email}\n\nPoruka:\n${poruka}`,
+      text: `Ime: ${ime}\nTelefon: ${telefon}\nEmail: ${email}\nIP adresa: ${ip}\n\nPoruka:\n${poruka}`,
     });
 
     return Response.json({ ok: true });
