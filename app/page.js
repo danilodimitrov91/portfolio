@@ -71,6 +71,9 @@ const services = [
   { num: '01', title: 'Izrada sajtova', desc: 'Dizajn i razvoj od nule, građen oko konverzije i brzine.' },
   { num: '02', title: 'Redizajn', desc: 'Stari sajt, novi udarac. Bez gubljenja SEO pozicija.' },
   { num: '03', title: 'Održavanje', desc: 'Sajt koji radi 24/7, bez tebe da brineš o tome.' },
+  { num: '04', title: 'Domen', desc: 'Pomoć oko izbora i kupovine domena koji pristaje tvom brendu.' },
+  { num: '05', title: 'Hosting', desc: 'Hostovanje sajta na pouzdanoj infrastrukturi, bez glavobolje oko servera.' },
+  { num: '06', title: 'SEO saveti', desc: 'Osnovna SEO podešavanja i preporuke da te ljudi lakše pronađu.' },
 ];
 
 const marqueeItems = ['DIZAJN', 'RAZVOJ', 'BREND', 'KONVERZIJA', 'BRZINA'];
