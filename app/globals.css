@@ -56,6 +56,17 @@ img.proj-img { object-fit: cover; display: block; }
 .proj-name { font-size: 19px; font-weight: 800; margin: 6px 0 0; }
 .proj-arrow { font-size: 22px; font-weight: 800; transition: transform 0.3s ease; }
 
+.pricing-header { margin: 0 0 56px; }
+.pricing-header .section-title { margin-bottom: 16px; }
+.pricing-intro { font-size: 17px; line-height: 1.6; color: oklch(0.65 0.01 90); margin: 0; max-width: 480px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: oklch(0.3 0.01 270); border-radius: 16px; overflow: hidden; }
+.pricing-card { background: oklch(0.19 0.006 270); padding: 40px 36px; }
+.pricing-num { font-size: 40px; font-weight: 900; color: oklch(0.75 0.19 130); margin-bottom: 16px; }
+.pricing-title { font-size: 21px; font-weight: 800; margin: 0 0 10px; }
+.pricing-desc { font-size: 16px; line-height: 1.6; color: oklch(0.65 0.01 90); margin: 0; }
+.pricing-note { font-size: 16px; color: oklch(0.75 0.01 90); margin: 32px 0 0; }
+.pricing-note a { font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+
 .about-section { padding: 90px 0; border-top: 2px solid oklch(0.3 0.01 270); display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 64px; align-items: center; }
 .about-photo { aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: repeating-linear-gradient(135deg, oklch(0.25 0.01 270) 0 12px, oklch(0.22 0.01 270) 12px 24px); border: 1px solid oklch(0.3 0.01 270); display: flex; align-items: center; justify-content: center; }
 .about-photo-text { font-family: monospace; font-size: 13px; color: oklch(0.55 0.01 90); }
@@ -85,7 +96,8 @@ img.proj-img { object-fit: cover; display: block; }
 .footer { padding: 36px 0 48px; border-top: 2px solid oklch(0.3 0.01 270); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
 .footer-copy { font-size: 14px; color: oklch(0.55 0.01 90); font-weight: 600; }
 .footer-social { display: flex; gap: 28px; }
-.footer-link { font-size: 14px; color: oklch(0.75 0.01 90); font-weight: 600; }
+.footer-link { display: flex; align-items: center; gap: 8px; font-size: 14px; color: oklch(0.75 0.01 90); font-weight: 600; }
+.footer-icon { width: 18px; height: 18px; }
 
 @media (max-width: 860px) {
   .wrap { padding: 0 20px; }
@@ -107,6 +119,9 @@ img.proj-img { object-fit: cover; display: block; }
   .section { padding: 48px 0; }
   .section-title { margin-bottom: 28px; }
   .services-grid { grid-template-columns: 1fr; }
+
+  .pricing-header { margin-bottom: 28px; }
+  .pricing-grid { grid-template-columns: 1fr; }
 
   .projects-section { padding: 8px 0 48px; }
   .projects-header { margin: 36px 0 28px; }

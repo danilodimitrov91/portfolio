@@ -76,6 +76,15 @@ const services = [
   { num: '06', title: 'SEO saveti', desc: 'Osnovna SEO podešavanja i preporuke da te ljudi lakše pronađu.' },
 ];
 
+const pricingFactors = [
+  { num: '01', title: 'Broj stranica', desc: 'One-page sajt ili sajt sa više posebnih stranica — obim posla direktno utiče na cenu.' },
+  { num: '02', title: 'Prodavnica', desc: 'Obična prezentacija ili onlajn prodavnica sa katalogom i pretragom proizvoda.' },
+  { num: '03', title: 'Naručivanje', desc: 'Da li sajt ima opciju za onlajn poručivanje i plaćanje, ili je samo za prikaz ponude.' },
+  { num: '04', title: 'Napredne opcije', desc: 'Automatsko ažuriranje i preuzimanje proizvoda direktno od dobavljača.' },
+  { num: '05', title: 'Dodatne funkcionalnosti', desc: 'Svaka posebna funkcionalnost koju klijent zahteva, van standardnog obima projekta.' },
+  { num: '06', title: 'Integracije', desc: 'Povezivanje sa spoljnim servisima — plaćanje karticom, CRM, email marketing i slično.' },
+];
+
 const marqueeItems = ['DIZAJN', 'RAZVOJ', 'BREND', 'KONVERZIJA', 'BRZINA'];
 
 export default function Home() {
@@ -88,6 +97,7 @@ export default function Home() {
         <nav className="nav">
           <a href="#projekti" className="nav-link">Projekti</a>
           <a href="#usluge" className="nav-link">Usluge</a>
+          <a href="#cena" className="nav-link">Cena</a>
           <a href="#o-meni" className="nav-link">O meni</a>
         </nav>
         <a href="#kontakt" className="btn-cta">Započni projekat →</a>
@@ -157,6 +167,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="cena" className="section">
+        <div className="pricing-header">
+          <h2 className="section-title">Kako se formira cena<span className="accent">.</span></h2>
+          <p className="pricing-intro">Cena zavisi od par ključnih stvari:</p>
+        </div>
+        <div className="pricing-grid">
+          {pricingFactors.map((f) => (
+            <div className="pricing-card" key={f.num}>
+              <div className="pricing-num">{f.num}</div>
+              <h3 className="pricing-title">{f.title}</h3>
+              <p className="pricing-desc">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="pricing-note">
+          Pošalji mi par detalja o projektu i javljam se sa konkretnom ponudom — <a href="#kontakt">bez obaveza</a>.
+        </p>
+      </section>
+
       <section id="o-meni" className="about-section">
         <div className="about-photo">
           <img className="about-photo-img" src="/images/portret.webp" alt="Danilo Dimitrov" />
@@ -187,7 +216,16 @@ export default function Home() {
       <footer className="footer">
         <span className="footer-copy">© 2026 sajtovi.dev — Sva prava zadržana.</span>
         <div className="footer-social">
+          <a href="https://www.facebook.com/danilo.dimitrov" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <svg className="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22 12.06C22 6.48 17.52 2 11.94 2S1.88 6.48 1.88 12.06c0 5.02 3.68 9.18 8.48 9.94v-7.03H7.9v-2.91h2.46V9.91c0-2.43 1.44-3.77 3.65-3.77 1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.2 0-1.58.75-1.58 1.52v1.82h2.69l-.43 2.91h-2.26V22c4.8-.76 8.48-4.92 8.48-9.94Z" />
+            </svg>
+            Facebook
+          </a>
           <a href="https://www.linkedin.com/in/danilo-dimitrov-b2454415a/" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <svg className="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z" />
+            </svg>
             LinkedIn
           </a>
         </div>
